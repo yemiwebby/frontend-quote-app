@@ -3,7 +3,10 @@
     <div v-if="editing">
         <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
             <div class="form-group" id="form__group">
-                <label for="content"><b>Edit Quote</b></label><br>
+                <label for="content">
+                    <b>Edit Quote</b>
+                    </label>
+                    <br>
                 <textarea id="content" v-model="editValue" rows="10" cols="30" class="form-control"></textarea>
                 <div class="control_1">
                     <button @click="onUpdate" class="btn btn-success">Save</button>
@@ -96,7 +99,6 @@
         display: block;
         margin-left: auto;
         margin-right: auto;
-        /*min-height: 125px;*/
     }
 
     .quote-holder {
@@ -126,7 +128,6 @@
     }
     .control_2 {
         flex: 1;
-        /*display: flex;*/
         justify-content: flex-end;
         align-items: center;
         font-size: 20px;
