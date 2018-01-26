@@ -1,11 +1,11 @@
 # frontend-quote-app
 
-> A simple quote application built with Vue
+> A simple quote application built with Vue (A progressive framework)
 
 ## Build Setup
 
 ``` bash
-# install dependencies
+# install dependencies for the project
 npm install
 
 # serve with hot reload at localhost:8080
