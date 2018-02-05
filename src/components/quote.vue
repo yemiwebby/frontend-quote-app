@@ -9,7 +9,7 @@
                     <br>
                 <textarea id="content" v-model="editValue" rows="10" cols="30" class="form-control"></textarea>
                 <div class="control_1">
-                    <button @click="onUpdate" class="btn btn-success">Save</button>
+                    <button @click="onUpdate" class="btn btn-success">Save Quote</button>
                     <button @click="onCancel" class="btn btn-danger">Cancel</button>
                 </div>
             </div>
@@ -67,10 +67,10 @@
                 this.$emit('quoteDeleted', this.qt.id);
                 axios.delete('http://localhost:8000/api/quote/' + this.qt.id)
                         .then(
-                                response => console.log(response)
+                                res => console.log(res)
             )
             .catch (
-                        error => console.log(error)
+                        err => console.log(err)
             )
             },
             onUpdate() {
@@ -79,10 +79,10 @@
                 axios.put('http://localhost:8000/api/quote/' + this.qt.id,
                         {content: this.editValue})
                         .then(
-                                response => console.log(response)
+                                res => console.log(res)
             )
             .catch (
-                        error => console.log(error)
+                        err => console.log(err)
             )
                 ;
             }
