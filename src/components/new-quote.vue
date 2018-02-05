@@ -7,7 +7,7 @@
                         <b>Quote</b>
                         </label>
                         <br>
-                    <i> Write your quote</i>
+                    <i> Write your quote here</i>
                     
                     <textarea name="" id="content" class="form-control"  v-model="quoteContent" cols="80" rows="6"></textarea>
                 </div>
@@ -34,10 +34,10 @@
             onSubmitted() {
                 axios.post('http://localhost:8000/api/quote',
                         {content: this.quoteContent})
-                        .then((response) => {
+                        .then((res) => {
                         window.location.href = "/";
                         })
-            .catch ((error) => console.log(error)
+            .catch ((err) => console.log(err)
             )}
         }
     }
